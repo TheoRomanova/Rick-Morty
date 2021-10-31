@@ -9,19 +9,18 @@ export const useLoadContent = () => {
 
   const getContent = useCallback(async () => {
     const url = `https://rickandmortyapi.com/api/character/?page=${page}`;
-    const response = await fetch(
-      searchValue ? `${url}&name=${searchValue}` : url
-    );
-    const jsonData = await response.json();
-    if (jsonData?.error) {
-      setErrorMessage(`Oops!...${jsonData.error}.`);
+    const data = await fetch(searchValue ? `${url}&name=${searchValue}` : url);
+    const response = await data.json();
+    if (response?.error) {
+      setErrorMessage(`Oops!...${response.error}.`);
     }
-    if (jsonData?.info) {
-      pages.current = jsonData.info.pages;
-      const newData = jsonData.results.slice(0, 10);
+    if (response?.info) {
+      errorMessage && setErrorMessage(null);
+      pages.current = response.info.pages;
+      const newData = response.results.slice(0, 10);
       setContent([...content, ...newData]);
     }
-  }, [content, page, searchValue]);
+  }, [content, page, searchValue, errorMessage]);
 
   useEffect(() => {
     getContent();
@@ -33,14 +32,12 @@ export const useLoadContent = () => {
 
   const onSearch = useCallback(
     (value) => {
-      if (!value) {
-        return;
-      }
       if (searchValue === value) {
         return;
       }
       setSearchValue(value);
       setContent([]);
+      setPage(1);
     },
     [searchValue]
   );
