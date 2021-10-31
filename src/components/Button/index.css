@@ -1,15 +1,18 @@
-.Button {
-  height: 2.325rem;
-  background: #767676;
-  border-radius: 0.25rem;
-  padding: 0 1rem;
-  outline: 0;
-  border: 0;
-  color: #FFF;
-  transition: background-color 100ms ease-in-out;
+.button {
+  height: 60px;
+  width: 150px;
+  font-weight: bold;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
   cursor: pointer;
+  border: none;
+  border-radius: 7px;
+  background-color: rgb(100, 174, 226);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+  rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
-.Button:hover {
-  background: #767676C0;
+.button:hover {
+  background-color: #6F69AC;
 }
+

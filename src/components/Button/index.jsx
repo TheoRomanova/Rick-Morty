@@ -1,7 +1,4 @@
 import "./index.css";
 
-const Button = (props) => (
-  <button className="Button" {...props} />
-);
-
+const Button = (props) => <button className="button" {...props} />;
 export default Button;

@@ -14,7 +14,7 @@ export const useLoadContent = () => {
     );
     const jsonData = await response.json();
     if (jsonData?.error) {
-      setErrorMessage(jsonData.error);
+      setErrorMessage(`Oops!...${jsonData.error}.`);
     }
     if (jsonData?.info) {
       pages.current = jsonData.info.pages;
@@ -55,7 +55,3 @@ export const useLoadContent = () => {
     isFetchMoreButtonVisible: !errorMessage && page < pages.current,
   };
 };
-
-//ЗАКРЕПИТЬ HEADER
-//CAT MEW
-//CSS + приоритет

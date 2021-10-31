@@ -1,29 +1,33 @@
-.Header {
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
-  position: relative;
   padding: 3rem;
+  width: 100%;
   border-radius: 1.5rem;
   box-shadow: rgba(149, 157, 165, 0.4) 0 8px 24px;
+  background-color: #B5DEFF;
 }
 
-.Header-logo {
+.header-logo {
   position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
-  width: 5rem;
-  height: 5rem;
-  pointer-events: none;
+  top: 15px;
+  left: 40px;
+  width: 120px;
+  height: 120px;
+  cursor: pointer;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .Header-logo {
-    animation: Header-logo-spin infinite 20s linear;
+  .header-logo {
+    animation: header-logo-spin infinite 20s linear;
   }
 }
 
-@keyframes Header-logo-spin {
+@keyframes header-logo-spin {
   from {
     transform: rotate(0deg);
   }

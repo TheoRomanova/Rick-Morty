@@ -16,9 +16,13 @@ const App = () => {
   return (
     <div className="App">
       <Header onSearch={onSearch} />
-      {errorMessage && <div>{errorMessage}</div>}
+      {errorMessage && <div className="error-message">{errorMessage}</div>}
       <ContentList content={content} />
-      {isFetchMoreButtonVisible && <Button onClick={onFetchMore}></Button>}
+      {isFetchMoreButtonVisible && (
+        <Button className=" button fetch-more-btn" onClick={onFetchMore}>
+          FETCH MORE
+        </Button>
+      )}
     </div>
   );
 };

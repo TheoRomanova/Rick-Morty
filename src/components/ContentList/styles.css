@@ -1,0 +1,20 @@
+.content-list-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 20px 10px 20px;
+  padding-left: 0;
+  justify-content: center;
+  width: 100%;
+  list-style-type: none;
+
+}
+
+.content-img {
+  margin: 5px;
+  padding: 0;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+  rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+  rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+ 

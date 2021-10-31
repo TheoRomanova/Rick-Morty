@@ -1,3 +1,14 @@
 .App {
+  margin-top: 190px;
   text-align: center;
+}
+
+.fetch-more-btn {
+  margin-bottom: 20px;
+}
+
+.error-message {
+  font-weight: bold;
+  font-size: 40px;
+  color: #b63b9b;
 }

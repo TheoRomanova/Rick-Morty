@@ -9,9 +9,9 @@ const SearchInput = ({ onSearch }) => {
   const onSubmit = useCallback(() => onSearch(value), [value, onSearch]);
 
   return (
-    <div className="SearchInput">
+    <div className="search-input">
       <input value={value} onChange={onSearchChange} />
-      <Button onClick={onSubmit}>Submit</Button>
+      <Button onClick={onSubmit}>SEARCH</Button>
     </div>
   );
 };
