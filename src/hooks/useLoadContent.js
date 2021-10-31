@@ -19,8 +19,7 @@ export const useLoadContent = () => {
     if (jsonData?.info) {
       pages.current = jsonData.info.pages;
       const newData = jsonData.results.slice(0, 10);
-      const newArray = [...content, ...newData];
-      setContent(newArray);
+      setContent([...content, ...newData]);
     }
   }, [content, page, searchValue]);
 
